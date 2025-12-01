@@ -208,8 +208,8 @@
         </div>
 
         <!-- Summary Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-blue-600 text-white p-6 rounded-xl shadow-md col-span-1 md:col-span-3 lg:col-span-1 print:bg-white print:text-black print:border-2 print:border-slate-800 print:shadow-none">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-blue-600 text-white p-6 rounded-xl shadow-md print:bg-white print:text-black print:border-2 print:border-slate-800 print:shadow-none">
             <h3 class="text-blue-100 text-sm font-medium uppercase tracking-wider print:text-slate-600">Total Deposit Required</h3>
             <div id="totalFeeReserve" class="text-3xl font-bold mt-2">$0</div>
             <div class="text-blue-200 text-xs mt-1 print:text-slate-500">
@@ -223,11 +223,6 @@
             <div class="text-gray-400 text-xs mt-1">Blended rate (Year 1)</div>
           </div>
 
-          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 print:border-gray-300">
-            <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Cost of Capital</h3>
-            <div id="feeAsPercentage" class="text-2xl font-bold mt-2 text-slate-700">0.00%</div>
-            <div class="text-gray-400 text-xs mt-1">Total fees / Initial Investment</div>
-          </div>
         </div>
 
         <!-- Detailed Table -->
@@ -363,7 +358,6 @@
       // Update display
       document.getElementById('totalFeeReserve').textContent = formatCurrency(totalReserve);
       document.getElementById('yearOneBlendedRate').textContent = formatPercent(yearOneBlendedRate);
-      document.getElementById('feeAsPercentage').textContent = formatPercent(privateAUM > 0 ? totalReserve / privateAUM : 0);
       document.getElementById('termDisplay').textContent = term;
 
       // Update print fields
